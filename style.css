@@ -9,25 +9,32 @@ body {
     background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
     color: white;
     text-align: center;
-    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
 }
 
 header {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px 0;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 1000;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
+    padding: 10px 0;
 }
 
 nav ul li {
@@ -38,11 +45,16 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
 }
 
 .hero {
-    margin-top: 80px;
-    padding: 50px;
+    padding: 150px 0 50px;
 }
 
 .hero img {
@@ -57,21 +69,51 @@ nav ul li a {
 }
 
 .portfolio {
-    padding: 40px;
+    padding: 80px 0;
 }
 
-.work-item img {
-    max-width: 60%;
+.portfolio h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.work-item {
+    background: #292929;
+    padding: 15px;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }
 
-.work-item img:hover {
-    transform: rotate(3deg) scale(1.1);
+.work-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.work-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.work-item:hover {
+    transform: translateY(-5px);
 }
 
 .contact {
-    padding: 30px;
+    padding: 50px 0;
+}
+
+.contact h2 {
+    font-size: 2rem;
+}
+
+.social-links {
+    margin-top: 20px;
 }
 
 .icon {
@@ -83,5 +125,20 @@ nav ul li a {
 
 .icon:hover {
     color: #f39c12;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .hero img {
+        max-width: 100%;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
 }
 
