@@ -3,39 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Моє портфоліо</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Портфоліо Дизайнера</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Підключаємо CSS файл -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Іконки соцмереж -->
 </head>
 <body>
     <header>
-        <h1>Моє портфоліо</h1>
-        <p>Графічний дизайнер | Веб-дизайн | Ілюстрації</p>
+        <h1>Моє Портфоліо</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">Про мене</a></li>
+                <li><a href="#portfolio">Портфоліо</a></li>
+                <li><a href="#contact">Контакти</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <section class="portfolio">
+    <section class="hero">
+        <img src="найк.jpg" alt="Приклад роботи" class="hero-image">
+        <h2>Привіт! Я професійний дизайнер</h2>
+        <p>Створюю сучасний, стильний та ефективний дизайн</p>
+    </section>
+    <section id="portfolio" class="portfolio">
         <h2>Мої роботи</h2>
-        <div class="gallery">
-            <div class="work">
-                <img src="найк.jpg" alt="Проєкт 1">
-                <p>Проєкт 1</p>
-            </div>
-            <div class="work">
-                <img src="найк.jpg" alt="Проєкт 2">
-                <p>Проєкт 2</p>
-            </div>
-            <div class="work">
-                <img src="найк.jpg" alt="Проєкт 3">
-                <p>Проєкт 3</p>
-            </div>
-            <div class="work">
-                <img src="найк.jpg" alt="Проєкт 4">
-                <p>Проєкт 4</p>
+        <div class="work-gallery">
+            <div class="work-item">
+                <img src="найк.jpg" alt="Дизайн 1">
+                <p>Приклад стильного банера</p>
             </div>
         </div>
     </section>
-
-    <footer>
-        <p>© 2025 Моє портфоліо | Усі права захищені</p>
-    </footer>
+    <section id="contact">
+        <h2>Зв'яжіться зі мною</h2>
+        <form>
+            <input type="text" placeholder="Ваше ім'я" required>
+            <input type="email" placeholder="Ваш Email" required>
+            <textarea placeholder="Ваше повідомлення" required></textarea>
+            <button type="submit">Надіслати</button>
+        </form>
+        <div class="social-links">
+            <a href="#" class="icon"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon"><i class="fas fa-envelope"></i></a>
+        </div>
+    </section>
+    <script src="script.js"></script> <!-- Підключаємо JavaScript файл -->
 </body>
 </html>
