@@ -1,34 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Анімація з'явлення секцій
-    const sections = document.querySelectorAll("section");
-    const options = {
-        threshold: 0.2,
-    };
-    
-    const observer = new IntersectionObserver(function (entries, observer) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-            }
-        });
-    }, options);
-    
-    sections.forEach(section => {
-        observer.observe(section);
-    });
+    const images = document.querySelectorAll(".gallery img");
 
-    // Прокрутка до секцій при кліці на меню
-    document.querySelectorAll("nav a").forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 50,
-                    behavior: "smooth"
-                });
-            }
+    images.forEach(img => {
+        img.addEventListener("click", function () {
+            const overlay = document.createElement("div");
+            overlay.classList.add("overlay");
+            document.body.appendChild(overlay);
+
+            const popup = document.createElement("div");
+            popup.classList.add("popup");
+            const newImg = document.createElement("img");
+            newImg.src = this.src;
+            popup.appendChild(newImg);
+            overlay.appendChild(popup);
+
+            overlay.addEventListener("click", function () {
+                overlay.remove();
+            });
         });
     });
 });
