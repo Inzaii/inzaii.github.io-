@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфоліо Дизайнера</title>
-    <link rel="stylesheet" href="style.css"> <!-- Оновлено шлях -->
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,38 +13,49 @@
 </head>
 <body>
     <header>
-        <h1>Моє Портфоліо</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">Про мене</a></li>
-                <li><a href="#portfolio">Портфоліо</a></li>
-                <li><a href="#contact">Контакти</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Моє Портфоліо</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">Про мене</a></li>
+                    <li><a href="#portfolio">Портфоліо</a></li>
+                    <li><a href="#contact">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    
+
     <section id="about" class="hero">
-        <img src="найк.jpg" alt="Приклад роботи" class="hero-image">
-        <h2>Привіт! Я професійний дизайнер</h2>
-        <p>Створюю сучасний, стильний та ефективний дизайн</p>
-    </section>
-    
-    <section id="portfolio" class="portfolio">
-        <h2>Мої роботи</h2>
-        <div class="work-item">
-            <img src="найк.jpg" alt="Дизайн 1">
-            <p>Приклад стильного банера</p>
+        <div class="container">
+            <h2>Привіт! Я професійний дизайнер</h2>
+            <p>Створюю сучасний, стильний та ефективний дизайн</p>
+            <img src="найк.jpg" alt="Приклад роботи">
         </div>
     </section>
-    
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Мої роботи</h2>
+            <div class="grid">
+                <div class="work-item"><img src="найк.jpg" alt="Дизайн 1"><p>Креативний банер</p></div>
+                <div class="work-item"><img src="найк.jpg" alt="Дизайн 2"><p>Рекламний плакат</p></div>
+                <div class="work-item"><img src="найк.jpg" alt="Дизайн 3"><p>Логотип бренду</p></div>
+                <div class="work-item"><img src="найк.jpg" alt="Дизайн 4"><p>Оформлення соцмереж</p></div>
+                <div class="work-item"><img src="найк.jpg" alt="Дизайн 5"><p>Дизайн упаковки</p></div>
+                <div class="work-item"><img src="найк.jpg" alt="Дизайн 6"><p>Брендовий мерч</p></div>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="contact">
-        <h2>Зв'яжіться зі мною</h2>
-        <div class="social-links">
-            <a href="#" class="icon"><i class="fab fa-telegram"></i></a>
-            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="icon"><i class="fas fa-envelope"></i></a>
+        <div class="container">
+            <h2>Зв'яжіться зі мною</h2>
+            <div class="social-links">
+                <a href="#" class="icon"><i class="fab fa-telegram">https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4%D1%87%D0%B8%D0%BA_%28%D1%84%D0%B8%D0%BB%D1%8C%D0%BC%29</i></a>
+                <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="icon"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
     </section>
 </body>
 </html>
-
