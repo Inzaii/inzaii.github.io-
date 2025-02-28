@@ -1,12 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Сайт завантажено успішно!");
 
-    const heroImage = document.querySelector(".hero img");
-    heroImage.addEventListener("mouseenter", () => {
-        heroImage.style.transform = "scale(1.1)";
-    });
+    const workItems = document.querySelectorAll(".work-item");
 
-    heroImage.addEventListener("mouseleave", () => {
-        heroImage.style.transform = "scale(1)";
+    workItems.forEach(item => {
+        item.addEventListener("mouseenter", () => {
+            item.style.transform = "translateY(-10px)";
+        });
+
+        item.addEventListener("mouseleave", () => {
+            item.style.transform = "translateY(0)";
+        });
     });
 });
