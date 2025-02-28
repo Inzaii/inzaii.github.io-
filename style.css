@@ -1,9 +1,75 @@
+/* Загальні стилі */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     text-align: center;
-    padding: 50px;
+    margin: 0;
+    padding: 0;
 }
-h1 {
+
+/* Шапка сайту */
+header {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header p {
+    font-size: 1.2em;
+    opacity: 0.8;
+}
+
+/* Портфоліо */
+.portfolio {
+    padding: 40px 20px;
+}
+
+.portfolio h2 {
+    font-size: 2em;
     color: #333;
+    margin-bottom: 20px;
+}
+
+/* Галерея */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.work {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 250px;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.work p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.work:hover {
+    transform: scale(1.05);
+}
+
+/* Футер */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    margin-top: 30px;
 }
